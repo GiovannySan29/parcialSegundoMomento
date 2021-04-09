@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+ 
+{% block body %}
+  <h1>Dashboard <small> Welcome {{session.username}}</small></h1>
+  <a class="btn btn-success" href="/add_article"> Add productos</a>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>ID</th>
+      <td>idproducto</td>
+      <td>cuidad</td>
+      <td>pais</td>
+      <td>direccion</td>
+      <td>ubicacion</td>
+      <td>habitacion</td>
+      <td>imagen</td>
+      <td>foto</td>
+      <td>valor</td>
+      <td>resena</td>
+      <th></th>
+      <th></th>
+    </tr>
+    {% for article in articles %}
+      <tr>
+        <td>{{article.idproducto}}</td>
+        <td>{{article.cuidad}}</td>
+        <td>{{article.pais}}</td>
+        <td>{{article.direccion}}</td>
+        <td>{{article.ubicacion}}</td>
+        <td>{{article.habitacion}}</td>
+        <td>{{article.imagen}}</td>
+        <td>{{article.foto}}</td>
+        <td>{{article.valor}}</td>
+        <td>{{article.resena}}</td>
+        <td>{{article.create_date}}</td>
+        <td><a href="edit_article/{{article.idproducto}}" class="btn btn-default pull-right">Edit</a></td>
+        <td>
+          <form action="{{url_for('delete_article', id=article.id)}}" method="post">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Delete" class="btn btn-danger">
+          </form>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

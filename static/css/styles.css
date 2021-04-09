@@ -1,0 +1,88 @@
+#my-text{
+    color: green;
+}
+.form-control.error small{
+    visibility: visible;
+}
+#container-fluid{
+    font-family: sans-serif;
+    width: 100%;
+    height:100vh;
+    text-transform: uppercase;
+    background-size: cover;
+    padding: 100px;
+    /* /* background-image: url('../img/slide1.jpg');  */
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center
+    
+}
+.login-form  {
+    width: 28%;
+    height: 80vh;
+    margin: 0 auto;
+    background: url(../img/login.jpg);
+    background-position: center;
+    padding: 30px 33px 67px;
+    border-top: 4px solid black;
+    background-size: cover;
+}
+
+.register-form{
+    width: 28%;
+    height: auto;
+    margin: 0 auto;
+    background: url(../img/login.jpg);
+    background-position: center;
+    padding: 30px 33px 67px;
+    border-top: 4px solid black;  
+}
+.container{
+    background-position: center;
+    margin: 0 auto;
+    padding: 20px 50px 6px;
+    margin-top: 25px;
+}
+.menu {
+    background-position: center; 
+}
+.form-inline{
+    float: right;
+    padding: 0 50px 6px;
+}
+.btn-s{
+    margin-top: 25px;
+    padding: 0 50px 6px;
+    background-position: center;
+}
+.container-footer{
+  padding-top: 100px;
+  height: 300px;
+  text-align: center;
+  color: white;
+}
+
+
+.register{
+  text-transform: uppercase;
+  font-size: 25px;
+  color: rgb(0, 0, 0) !important;
+  background-position: center;
+  padding: 30px 33px 67px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.footer{
+  height: 20rem;
+  overflow: hidden;
+  margin-top: 0;
+  background: linear-gradient(#34c8e9,rgb(107, 240, 162),gray) !important;
+}
+
+#logo{
+  width:69px;
+  height:64px;
+}
+.carousel-item img {
+  height: 650px;
+}

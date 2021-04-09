@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+ 
+{% block body %}
+  <h1>Register</h1>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    <div class="form-group">
+      {{render_field(form.fullname, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.email, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.username, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.country, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.city, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.password, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.confirm, class_="form-control")}}
+    </div>
+    <div class="form-group" for="Tipo">Tipo de persona: 
+      <br>
+      <input class="form-check-input" type="radio" name="typeUsers" id="typeUsers" value="Anfitrion" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Anfitrion
+                    </label>
+                        <input class="form-check-input" type="radio" name="typeUsers" id="typeUsers" value="Invitado">
+                    <label class="form-check-label" for="exampleRadios2">
+                        Invitado
+                    </label>
+    <!-- {{render_field(form.typeUsers, class_="form-control")}} -->
+  </div>
+    <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+  </form>
+{% endblock %}
